@@ -50,7 +50,7 @@ const authenticate = UserList => FormView =>
     login = e => {
       e.preventDefault();
       axios
-        .post("http://localhost:8000/api/login", this.state.user)
+        .post("https://auth-ii-db.herokuapp.com//api/login", this.state.user)
         .then(res => {
           localStorage.setItem("token", res.data.token);
           this.setState({
@@ -70,7 +70,7 @@ const authenticate = UserList => FormView =>
     register = e => {
         e.preventDefault();
         axios
-            .post("http://localhost:8000/api/register", this.state.user)
+            .post("https://auth-ii-db.herokuapp.com//api/register", this.state.user)
             .then(res => {
                 this.setState({
                     ...this.state,
