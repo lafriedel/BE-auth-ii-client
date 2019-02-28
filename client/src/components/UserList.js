@@ -8,7 +8,7 @@ class UserList extends React.Component {
   };
 
   componentDidMount() {
-    axios.get("https://auth-ii-db.herokuapp.com//api/users").then(res => {
+    axios.get("https://auth-ii-db.herokuapp.com/api/users").then(res => {
       console.log(res.data);
       this.setState({
         users: res.data.filter(u => u.department === this.props.user.department)
